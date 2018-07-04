@@ -11,8 +11,43 @@ public class WorkoutInformation {
         SetNo = setNo;
     }
 
-    public WorkoutInformation()
-     {
+    public String getWorkoutDay() {
+        return workoutDay;
+    }
 
-     }
+    public void setWorkoutDay(String workoutDay) {
+        this.workoutDay = workoutDay;
+    }
+
+    public String getGymLocation() {
+        return gymLocation;
+    }
+
+    public void setGymLocation(String gymLocation) {
+        this.gymLocation = gymLocation;
+    }
+
+    public String getWorkoutType() {
+        return workoutType;
+    }
+
+    public void setWorkoutType(String workoutType) {
+        this.workoutType = workoutType;
+    }
+
+    public String getRepNp() {
+        return RepNp;
+    }
+
+    public void setRepNp(String repNp) {
+        RepNp = repNp;
+    }
+
+    public String getSetNo() {
+        return SetNo;
+    }
+
+    public void setSetNo(String setNo) {
+        SetNo = setNo;
+    }
 }
