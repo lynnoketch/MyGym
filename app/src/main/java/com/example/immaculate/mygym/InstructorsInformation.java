@@ -1,7 +1,12 @@
 package com.example.immaculate.mygym;
 
 public class InstructorsInformation {
-    public String Name,PhoneNumber,Gym;
+    public String Name, PhoneNumber, Gym;
+
+    public InstructorsInformation() {
+
+    }
+
 
     public InstructorsInformation(String name, String phoneNumber, String gym) {
         Name = name;
