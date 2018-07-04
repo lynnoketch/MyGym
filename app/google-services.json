@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "11691210092",
+    "firebase_url": "https://mygy-60ff1.firebaseio.com",
+    "project_id": "mygy-60ff1",
+    "storage_bucket": "mygy-60ff1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11691210092:android:b5c6721388c1cbfd",
+        "android_client_info": {
+          "package_name": "com.example.immaculate.mygym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11691210092-gim7cfnf2up7t159oomdpr480p3n457q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDayfFRVjLscgjfzTnpcpi0T1u--jDeJY0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
