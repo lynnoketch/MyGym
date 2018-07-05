@@ -10,72 +10,48 @@ import android.widget.TextView;
 import java.util.List;
 
 
-    public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyHoder>{
+    public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
 
         List<InstructorsInformation> list;
         Context context;
 
-        public RecyclerAdapter(List<InstructorsInformation> list, Context context) {
-            this.list = list;
-            this.context = context;
+
+        public class MyViewHolder extends RecyclerView.ViewHolder {
+            public TextView Name, Phone, Gym;
+
+            public MyViewHolder(View view) {
+                super(view);
+                Name = (TextView) view.findViewById(R.id.name);
+                Phone = (TextView) view.findViewById(R.id.phonenumber);
+                Gym = (TextView) view.findViewById(R.id.gym);
+            }
+        }
+
+
+        public RecyclerAdapter(List<InstructorsInformation> InstructorList, InstructorsActivity instructorsActivity) {
+            this.list = InstructorList;
         }
 
         @Override
-        public MyHoder onCreateViewHolder(ViewGroup parent, int viewType) {
+        public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View itemView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.instructor_list_view, parent, false);
 
-            View view = LayoutInflater.from(context).inflate(R.layout.instructor_card,parent,false);
-            MyHoder myHoder = new MyHoder(view);
-
-
-            return myHoder;
+            return new MyViewHolder(itemView);
         }
 
+
+
         @Override
-        public void onBindViewHolder(MyHoder holder, int position) {
-            InstructorsInformation mylist = list.get(position);
-            holder.Iname.setText(mylist.getName());
-            holder.phone.setText(mylist.getPhoneNumber());
-            holder.locality.setText(mylist.getGym());
+        public void onBindViewHolder(MyViewHolder holder, int position) {
+            InstructorsInformation instructorsInformation = list.get(position);
+            holder.Name.setText(instructorsInformation.getName());
+            holder.Phone.setText(instructorsInformation.getPhoneNumber());
+            holder.Gym.setText(instructorsInformation.getGym());
         }
 
         @Override
         public int getItemCount() {
-
-            int arr = 0;
-
-            try{
-                if(list.size()==0){
-
-                    arr = 0;
-
-                }
-                else{
-
-                    arr=list.size();
-                }
-
-
-
-            }catch (Exception e){
-
-
-
-            }
-
-            return arr;
-
-        }
-
-        class MyHoder extends RecyclerView.ViewHolder {
-            TextView Iname, phone, locality;
-
-
-            public MyHoder(View itemView) {
-                super(itemView);
-                Iname = (TextView) itemView.findViewById(R.id.name);
-                phone = (TextView) itemView.findViewById(R.id.phonenumber);
-                locality = (TextView) itemView.findViewById(R.id.gym);
-
-            }
+            return list.size();
         }
 }

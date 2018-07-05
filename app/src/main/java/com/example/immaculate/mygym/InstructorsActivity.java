@@ -45,12 +45,12 @@ public class InstructorsActivity extends AppCompatActivity {
 
                     InstructorsInformation value = dataSnapshot1.getValue(InstructorsInformation.class);
                     InstructorsInformation fire = new InstructorsInformation();
-                    String Iname = value.getName();
-                    String phone = value.getPhoneNumber();
-                    String locality = value.getGym();
-                    fire.setName(Iname);
-                    fire.setPhoneNumber(phone);
-                    fire.setGym(locality);
+                    String Name = value.getName();
+                    String Phone = value.getPhoneNumber();
+                    String Gym = value.getGym();
+                    fire.setName(Name);
+                    fire.setPhoneNumber(Phone);
+                    fire.setGym(Gym);
                     list.add(fire);
 
                 }
